@@ -1,0 +1,10 @@
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-us form input, textarea{
+    width: 60%;
+    margin-bottom: 10px;
+}
