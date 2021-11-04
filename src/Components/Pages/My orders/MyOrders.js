@@ -6,7 +6,7 @@ const MyOrders = () => {
     const {user}= useAuth();
     const [ myOrders , setMyOrders ] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('http://ost:5000/orders')
         .then(res=>res.json())
         .then(data => {
             const myData = data.filter(data => data.email === user.email)

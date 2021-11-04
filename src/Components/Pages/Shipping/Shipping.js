@@ -16,7 +16,7 @@ const Shipping = () => {
     const [selectedData, setSelectedData] = useState([])
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/tickets/${id}`)
+        fetch(`https://quiet-scrubland-74220.herokuapp.com/tickets/${id}`)
         .then(res=>res.json())
         .then(data=>{
             console.log(data)
@@ -32,7 +32,7 @@ const Shipping = () => {
         formData.orderItem = selectedData;
         formData.orderStatus = "pending";
 
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://quiet-scrubland-74220.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');

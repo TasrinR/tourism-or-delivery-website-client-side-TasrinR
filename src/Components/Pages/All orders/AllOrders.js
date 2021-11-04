@@ -5,7 +5,7 @@ import AllOrder from './AllOrder';
 const AllOrders = () => {
     const [allOrders, setAllOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://quiet-scrubland-74220.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setAllOrders(data));
     }, [])
@@ -13,7 +13,7 @@ const AllOrders = () => {
     const handleDelete = async (id) => {
        const isConfirmed = window.confirm("are you sure you want to delete?!");
         if(isConfirmed){
-            const { data } = await axios.delete(`http://localhost:5000/orders/${id}`)
+            const { data } = await axios.delete(`https://quiet-scrubland-74220.herokuapp.com/orders/${id}`)
             if (data.deletedCount === 1) {
                 alert('deleted succesfully!')
                 setAllOrders((orders) => orders.filter(order => order._id !== id))

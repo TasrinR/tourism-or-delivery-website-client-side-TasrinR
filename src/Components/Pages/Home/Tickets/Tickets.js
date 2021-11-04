@@ -7,7 +7,7 @@ const Tickets = () => {
     const {user}= useAuth()
     const [tickets, setTickets] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/tickets')
+        fetch('https://quiet-scrubland-74220.herokuapp.com/tickets')
         .then(res=>res.json())
         .then(data=>{
             setTickets(data);
