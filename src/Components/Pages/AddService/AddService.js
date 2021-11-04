@@ -17,11 +17,13 @@ const AddService = () => {
     return (
         <div className="add-service m-5 p-5">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <textarea {...register("New Tour")} placeholder="Enter the new location" />
+                <textarea {...register("name")} placeholder="Enter the new location" />
                 <textarea {...register("description")} placeholder="Description" />
-                <textarea {...register("country")} placeholder="Country" />
-                <textarea {...register("city")} placeholder="City" />
-                <input type="number" {...register("contactNo")} placeholder="Contact No" />
+                <textarea {...register("location")} placeholder="Location" />
+                <textarea {...register("time")} placeholder="Tour Duration" />
+                <input type="number" {...register("price")} placeholder="Budget" />
+                <textarea {...register("availability")} placeholder="Availability" />
+                <textarea {...register("img")} placeholder="Enter a photo of the place" />
                 <input type="submit" />
             </form>
         </div>

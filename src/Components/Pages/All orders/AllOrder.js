@@ -1,11 +1,14 @@
-import axios from 'axios';
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import useAuth from '../../Hooks/useAuth';
 
 const AllOrder = (props) => {
     const {user} = useAuth()
-    const {name, email, address, city, country, orderItem, img} = props.allOrder;
+    const {_id ,name, email, address, city, country, orderItem, img} = props.allOrder;
+    const {handleDelete} = props;
+
+    
+
     return (
         <Row  className="m-3 p-3" style={{border: '1px solid grey', textAlign:"justify"}}>
             <Col xs={12} md={8}>
@@ -22,7 +25,7 @@ const AllOrder = (props) => {
                 <p>{city}</p>
                 <p>{country}</p>
                 <small>{address}</small>
-                <button className="btn-warning" >DELETE</button>
+                <button className="btn-warning"  onClick={() => handleDelete(_id)}>DELETE</button>
             </Col>
         </Row>
     );
