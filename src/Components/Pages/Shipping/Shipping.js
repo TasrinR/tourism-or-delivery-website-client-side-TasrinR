@@ -44,12 +44,12 @@ const Shipping = () => {
     
     return (
         <Row className="shipping">
-            <Col style={{textAlign:"left"}} xs={12} md={6}>
-            <h5>{selectedData.name}</h5>
-            <p>{selectedData.location}</p>
-            <b>{selectedData.time}</b>
-            <p>{selectedData.description}</p>
-            <h5>{selectedData.price}</h5>
+            <Col style={{textAlign:"left"}} xs={12} md={6} className="ps-5">
+            <h5>Tour Name: {selectedData.name}</h5>
+            <p>Location: {selectedData.location}</p>
+            <b>Duration: {selectedData.time}</b>
+            <p>Description: {selectedData.description}</p>
+            <h5>Price: {selectedData.price}</h5>
 
             </Col>
             <Col xs={12} md={6}>
